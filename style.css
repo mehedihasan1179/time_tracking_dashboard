@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+
+  --lightorange: hsl(15, 100%, 70%);
+  --softblue: hsl(195, 74%, 62%);
+  --lightred: hsl(348, 100%, 68%);
+  --limegreen: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --softorange: hsl(43, 84%, 65%);
+
+  --verydarkblue: hsl(226, 43%, 10%);
+  --darkblue: hsl(235, 46%, 20%);
+  --desaturatedblue: hsl(235, 45%, 61%);
+  --paleblue: hsl(236, 100%, 87%);
+}
+
+body {
+  background-color: var(--verydarkblue);
+  min-height: 100vh;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  /* min-height: fit-content; */
+  margin: 0 auto;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+
+  /* Adjust grid layout for mobile */
+
+  .card {
+    /* background: aqua; */
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  /* Profile Card (card--one) */
+  .card--one {
+    grid-column: 1;
+    grid-row: 1/3;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .profile {
+      background-color: var(--darkblue);
+
+      .top {
+        padding: 1rem 1rem 4.5rem 1rem;
+        background: var(--blue);
+        border-radius: 1rem;
+
+        .img {
+          width: 50px;
+          border: 2px solid white;
+          border-radius: 50%;
+        }
+
+        .report {
+          color: var(--paleblue);
+          font-size: 12px;
+          margin-top: 1.5rem;
+        }
+
+        h1 {
+          color: white;
+          font-weight: 300;
+          font-size: 1.8rem;
+        }
+      }
+
+      .bottom {
+        background-color: var(--darkblue);
+
+        .buttons {
+          padding: 1.5rem 1.5rem 3rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            text-align: left;
+            color: var(--paleblue);
+            cursor: pointer;
+          }
+
+          /* .active {
+            color: white;
+          } */
+
+          button:is(:hover, .active) {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  /* Card Styles (card--two to card--seven) */
+  .card--two,
+  .card--three,
+  .card--four,
+  .card--five,
+  .card--six,
+  .card--seven {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    .main-bg {
+      /* z-index: 10; */
+      height: fit-content;
+      width: fit-content;
+
+      .work {
+        width: 50px;
+        position: absolute;
+        right: 10%;
+        top: -5%;
+      }
+
+      .sub-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--darkblue);
+        padding: 1rem 1rem 2rem 1rem;
+        margin-top: 2rem;
+        color: white;
+        border-radius: 1rem;
+        cursor: pointer;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.2rem;
+          h4 {
+            font-weight: 500;
+          }
+
+          img {
+            height: fit-content;
+          }
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 14px;
+          color: var(--paleblue);
+          padding-bottom: 2rem;
+          font-weight: 300;
+        }
+      }
+
+      .sub-bg:hover {
+        background-color: var(--desaturatedblue);
+      }
+    }
+  }
+
+  .card--two {
+    background-color: var(--lightorange);
+  }
+  .card--three {
+    background-color: var(--softblue);
+  }
+  .card--four {
+    background-color: var(--lightred);
+  }
+  .card--five {
+    background-color: var(--limegreen);
+  }
+
+  .card--five .work {
+    margin-top: 0.6rem;
+  }
+
+  .card--six {
+    background-color: var(--violet);
+  }
+  .card--seven {
+    background-color: var(--softorange);
+  }
+}
+
+/* Apply the styles for 768px (Tablet and below) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 3.5rem 0 8rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1rem;
+  }
+
+  /* Profile Card (card--one) */
+  .card--one {
+    grid-column: 1 / span 2; /* Take up full width */
+    /* grid-row: auto; */
+  }
+
+  /* Adjust card style for smaller screens */
+  .card {
+    width: 100%;
+  }
+
+  .card--two,
+  .card--three,
+  .card--four,
+  .card--five,
+  .card--six,
+  .card--seven {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 250px; /* Adjust height */
+  }
+
+  .card--two .main-bg,
+  .card--three .main-bg,
+  .card--four .main-bg,
+  .card--five .main-bg,
+  .card--six .main-bg,
+  .card--seven .main-bg {
+    height: 100%;
+  }
+
+  .card--two,
+  .card--three,
+  .card--four,
+  .card--five,
+  .card--six,
+  .card--seven {
+    padding: 1rem;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  h1 {
+    font-size: 1.6rem; /* Smaller font size for name */
+  }
+
+  .report {
+    font-size: 10px;
+  }
+
+  .buttons button {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 2rem; /* Slightly smaller for responsiveness */
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  /* Adjust profile card's bottom section buttons */
+  .buttons {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: space-between;
+  }
+
+  /* Ensure proper spacing around images */
+  .work {
+    width: 35px;
+    top: 0;
+  }
+
+  .card--five .work {
+    margin-top: 0.2rem;
+  }
+
+  .sub-bg{
+    position: absolute;
+    margin-left: -5%;
+  }
+
+  .sub-bg p {
+    font-size: 12px;
+  }
+
+  .card--five .sub-bg p,
+  .card--six .sub-bg p,
+  .card--seven .sub-bg p {
+    font-size: 12px; /* Ensure text is readable on smaller screens */
+  }
+  
+  /* Reduce the width of the profile card for smaller devices */
+  .profile {
+    padding: 1rem;
+    background: var(--darkblue);
+  }
+
+  .top {
+    padding: 1rem 1rem 3rem 1rem;
+    background: var(--blue);
+    border-radius: 1rem;
+  }
+
+  .buttons {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .buttons button {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  /* Additional margin to ensure the card layout doesn't look cramped */
+  .card-container {
+    gap: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  .card-container{
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    padding: 1.5rem 1.5rem 3rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    gap: 1rem;
+  }  
+}

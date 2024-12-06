@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- StyleSheets -->
+   <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card-container">
+
+      
+      <div class="card card--one">
+        <div class="profile">
+
+          <div class="top">
+            <img src="./images/image-jeremy.png" alt="" class="img">
+            <div class="top-info">
+              <p class="report">Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
+            
+          </div>
+        
+          <div class="bottom">
+            <div class="buttons">
+              <button type="button" class="daily">Daily</button>
+              <button type="button" class="weekly active">Weekly</button>
+              <button type="button" class="monthly">Monthly</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--two" id="work">
+        <div class="main-bg">
+          <img src="./images/icon-work.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Work</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="work-current">32hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="work-previous"></span>36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--three" id="play">
+        <div class="main-bg">
+          <img src="./images/icon-play.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Play</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="play-current">10hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="play-previous"></span>8hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--four" id="study">
+        <div class="main-bg">
+          <img src="./images/icon-study.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Study</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="study-current">4hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="study-previous"></span>7hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--five" id="exercise">
+        <div class="main-bg">
+          <img src="./images/icon-exercise.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Exercise</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="exercise-current">4hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="exercise-previous"></span>5hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--six" id="social">
+        <div class="main-bg">
+          <img src="./images/icon-social.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Social</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="social-current">5hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="social-previous"></span>10hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--seven" id="selfCare">
+        <div class="main-bg">
+          <img src="./images/icon-self-care.svg" alt="" class="work">
+          <div class="sub-bg">
+            <div class="header">
+              <h4>Self-Care</h4>
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2><span id="selfCare-current">2hrs</span></h2>
+            <p><sapn id="prefix"></sapn>Last week - <span id="selfCare-previous"></span>2hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+      
+
+<!--   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+
+
+
+  <script src="index.js"></script>
+</body>
+</html>
